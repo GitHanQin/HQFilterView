@@ -66,7 +66,7 @@ public class HQFilterView: UIView {
     }()
    public var heightOfToolsView:CGFloat = 44
     
-    override init(frame: CGRect) {
+   public override init(frame: CGRect) {
         super.init(frame: frame)
         setUpUI()
         registerNib()

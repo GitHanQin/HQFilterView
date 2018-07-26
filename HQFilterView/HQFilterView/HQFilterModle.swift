@@ -9,19 +9,19 @@
 import Foundation
 
 public struct HQFilterDetialModle {
-    var title:String = ""
-    var image:String = ""
-    var selectorImage:String = ""
-    var cacheImage:String = ""
-    var isSelector:Bool = false
-    init() {
+    public var title:String = ""
+    public var image:String = ""
+    public var selectorImage:String = ""
+    public var cacheImage:String = ""
+    public var isSelector:Bool = false
+    public init() {
         title = ""
         image = ""
         selectorImage = ""
         cacheImage = ""
         isSelector = false
     }
-    init(title:String,image:String,selectorImage:String,cacheImage:String,isSelector:Bool) {
+    public init(title:String,image:String,selectorImage:String,cacheImage:String,isSelector:Bool) {
         self.title = title
         self.image = image
         self.selectorImage = selectorImage
@@ -30,8 +30,8 @@ public struct HQFilterDetialModle {
     }
 }
 public struct HQFilterModle {
-    var items:[HQFilterDetialModle] = [HQFilterDetialModle].init()
-    init() {
+    public var items:[HQFilterDetialModle] = [HQFilterDetialModle].init()
+    public init() {
         items = [HQFilterDetialModle].init()
     }
 }
