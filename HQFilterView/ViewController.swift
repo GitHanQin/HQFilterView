@@ -27,6 +27,18 @@ class ViewController: UIViewController {
         let itme4 = HQFilterDetialModle.init(title: "价格", image: "duo", selectorImage: "jiang", cacheImage: "sheng", isSelector: false)
         modle.items.append(itme4)
         
+        let itme5 = HQFilterDetialModle.init(title: "价格", image: "duo", selectorImage: "jiang", cacheImage: "sheng", isSelector: false)
+        modle.items.append(itme5)
+        
+        let itme6 = HQFilterDetialModle.init(title: "价格", image: "duo", selectorImage: "jiang", cacheImage: "sheng", isSelector: false)
+        modle.items.append(itme6)
+        let itme7 = HQFilterDetialModle.init(title: "价格", image: "duo", selectorImage: "jiang", cacheImage: "sheng", isSelector: false)
+        modle.items.append(itme7)
+        
+        
+        
+        
+        filter.filterButtonFont = UIFont.systemFont(ofSize: 18)
         filter.modle = modle
         filter.themColor = UIColor.orange
     }

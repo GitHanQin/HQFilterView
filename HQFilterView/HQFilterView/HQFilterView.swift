@@ -13,7 +13,7 @@ public protocol HQFilterDelegate {
     func didSelectorMyChooseButton()
 }
 
-public var marginSpace = 20
+public var marginSpace = 20 
 public class HQFilterView: UIView {
    public var delegate:HQFilterDelegate?
    public var modle:HQFilterModle = HQFilterModle.init(){
@@ -53,18 +53,25 @@ public class HQFilterView: UIView {
             toolsView.reloadData()
         }
     }
-    private lazy var toolsView:UICollectionView = {
+    public var filterButtonFont:UIFont = UIFont.systemFont(ofSize: 14) {
+        didSet {
+            toolsView.reloadData()
+        }
+    }
+    public lazy var toolsView:UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
-        let collectionView = UICollectionView.init(frame: CGRect.init(x: 0, y: 0, width: self.frame.size.width, height:heightOfToolsView ), collectionViewLayout: layout)
         
+        let collectionView = UICollectionView.init(frame: CGRect.init(x: 0, y: 0, width: self.frame.size.width, height:heightOfToolsView ), collectionViewLayout: layout)
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self
         return collectionView
     }()
-   public var heightOfToolsView:CGFloat = 44
+    private var heightOfToolsView:CGFloat = 44
     
    public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -84,6 +91,7 @@ extension HQFilterView:UICollectionViewDataSource,UICollectionViewDelegate,UICol
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FilterToolsItemCellID", for: indexPath) as! FilterToolsItemCell
         cell.filterButton.setTitle(self.modle.items[indexPath.row].title , for: .normal)
+        cell.filterButton.titleLabel?.font = filterButtonFont
         cell.filterButton.setImage(UIImage.init(named: self.modle.items[indexPath.row].image), for: .normal)
         cell.filterButton.setImage(UIImage.init(named: self.modle.items[indexPath.row].selectorImage), for: .selected)
         cell.filterButton.tag = indexPath.row

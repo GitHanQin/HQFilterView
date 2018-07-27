@@ -4,9 +4,13 @@ PODS:
 DEPENDENCIES:
   - SnapKit
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SnapKit
+
 SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
 PODFILE CHECKSUM: fbfb7cb7f931763927920bbcc601cd6767d8c462
 
-COCOAPODS: 1.4.0.rc.1
+COCOAPODS: 1.5.3

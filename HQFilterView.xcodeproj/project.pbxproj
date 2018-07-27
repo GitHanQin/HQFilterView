@@ -178,7 +178,6 @@
 				A1EB074E2060AD3B00FE7B0F /* Frameworks */,
 				A1EB074F2060AD3B00FE7B0F /* Resources */,
 				44851FC40B8FEDBE6125C6D8 /* [CP] Embed Pods Frameworks */,
-				DE3E5A1BF38E9D8257E94E5D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -333,21 +332,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HQFilterView/Pods-HQFilterView-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE3E5A1BF38E9D8257E94E5D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HQFilterView/Pods-HQFilterView-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
